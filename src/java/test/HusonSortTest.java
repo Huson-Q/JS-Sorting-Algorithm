@@ -1,4 +1,5 @@
 import huson.BubbleSort;
+import huson.InsertionSort;
 import huson.SelectionSort;
 import org.junit.After;
 import org.junit.Assert;
@@ -45,6 +46,14 @@ public class HusonSortTest
         System.out.println("sortedArray = \n" + Arrays.toString(sortedArray));
         System.out.println("selectionSortedArray = \n" + Arrays.toString(new SelectionSort().sort(array)));
         Assert.assertArrayEquals(sortedArray, new SelectionSort().sort(array));
+    }
+
+    @Test
+    public void testInsertionSort()
+    {
+        System.out.println("sortedArray = \n" + Arrays.toString(sortedArray));
+        System.out.println("selectionSortedArray = \n" + Arrays.toString(new InsertionSort().sort(array)));
+        Assert.assertArrayEquals(sortedArray, new InsertionSort().sort(array));
     }
 
     private int[] generateRandomArray(int number, int min, int max)
